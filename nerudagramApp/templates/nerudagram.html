@@ -2,30 +2,69 @@
 {% load static %}
 
 {% block body_block %}
-<div class="row py-3">
-  <div class="col-3">
-    <div class="sticky-top">
-      <ul class="list-group">
-        <li id="nerudagram" class="list-group-item"><a href="{% url 'nerudagramApp:nerudagram' %}">Nerudagrama</a></li>
-        <li class="list-group-item"><a href="{% url 'nerudagramApp:como-funciona' %}">Cómo funciona</a></li>
-        <li class="list-group-item"><a href="{% url 'nerudagramApp:poemas-creados' %}">Poemas creados</a></li>
-        <li class="list-group-item"><a class="btn btn-link" href="https://www.github.com/PdePinguino/n-grams">Código fuente</a></li>
-      </ul>
+<!-- Masthead-->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <!-- Masthead Avatar Image-->
+        <!-- <img class="masthead-avatar mb-5" src="{%static 'images/pdepinguino-logo.png' %}" alt="..." /> -->
+        <!-- Masthead Heading -->
+        <h1 class="masthead-heading text-uppercase mb-0">Nerudagram</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-feather"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Masthead Subheading-->
+        <p class="masthead-subheading font-weight-light mb-0">Crea poemas como un vate</p>
     </div>
-  </div>
-  <div class="col-9" id="main">
-    <div class="text-center">
-      <h1>Nerudagram</h1>
-      <h2>Crea poemas como un vate</h2>
+</header>
+
+<!-- Cómo funciona Section-->
+<section class="page-section portfolio" id="como-funciona">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="row py-3">
+          <div class="col-3">
+            <div class="sticky-top">
+              <ul class="list-group">
+                <li id="nerudagram" class="list-group-item"><a href="{% url 'nerudagramApp:nerudagram' %}">Nerudagrama</a></li>
+                <!-- <li class="list-group-item"><a href="{% url 'nerudagramApp:como-funciona' %}">Cómo funciona</a></li> -->
+                <li class="list-group-item"><a href="{% url 'nerudagramApp:create' %}">Crear un poema</a></li>
+                <li class="list-group-item"><a href="{% url 'nerudagramApp:poemas-creados' %}">Poemas creados</a></li>
+                <li class="list-group-item"><a href="https://www.github.com/PdePinguino/n-grams">Código fuente</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-9" id="main">
+
+              {%block neruda_block %}
+                  <div class="mx-auto">
+                    <p class="lead">Nerudagra es una máquina que escribe poemas 'a lo Pablo Neruda'.<br>
+                    Esta máquina aprendió qué palabras solía ocupar el poeta y con qué frecuencia.<br>
+                    Puedes ajustar los párametros de la máquina para que genere un poema distinto.<br>
+                    <br>Haz click en crear un poema o pasa a leer los ya creados.
+                    </p>
+                    <a class="btn btn-success" href="{% url 'nerudagramApp:create' %}">Crear un poema</a>
+                    <a class="btn btn-warning" href="{% url 'nerudagramApp:poemas-creados' %}">Leer poemas</a>
+                  </div>
+                  <div class="col-md-9 text-center">
+                    <div class="col-md-4 text-center">
+
+                    </div>
+                    <div class="col-md-4 text-center">
+
+                    </div>
+
+                  </div>
+
+              {% endblock %}
+
+          </div>
+        </div>
+      </div>
     </div>
-
-    {%block neruda_block %}
-    
-    <a href="{% url 'nerudagramApp:create' %}">Crear un poema</a>
-    {% endblock %}
-
-  </div>
-</div>
+</section>
 
 <script src="{% static 'js/nerudagram.js' %}"></script>
 

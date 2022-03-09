@@ -4,7 +4,7 @@
 {% block neruda_block %}
 <h1>
   {% if not form.instance.pk %}
-  Crear poema:
+  Elige los parámetros de la máquina:
   {% else %}
   Editar poema:
   {% endif%}
@@ -12,6 +12,6 @@
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input id="submit" type="submit" class="btn btn-primary" value="Generar">
+    <input id="submit" type="submit" class="btn btn-success" value="Generar">
   </form>
 {% endblock %}

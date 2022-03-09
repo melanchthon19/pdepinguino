@@ -3,55 +3,88 @@
 
 {% block body_block %}
 
-
-<div class="container px-4 px-lg-5">
-    <div class="row gx-4 gx-lg-5">
-        <div class="col-lg-6">
-            <img src="{% static 'images/pdepinguino_logo.png' %}" alt="P DE PINGUINO IMAGE">
+<!-- Masthead-->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <!-- Masthead Avatar Image-->
+        <img class="masthead-avatar mb-5" src="{%static 'images/pdepinguino-logo.png' %}" alt="..." />
+        <!-- Masthead Heading-->
+        <h1 class="masthead-heading text-uppercase mb-0">NLP Research Group</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <!-- <div class="divider-custom-icon"><i class="fas fa-star"></i></div> -->
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Masthead Subheading-->
+        <p class="masthead-subheading font-weight-light mb-0">Natural Language Generation</p>
+    </div>
+</header>
+<!-- Portfolio Section-->
+<section class="page-section portfolio" id="portfolio">
+    <div class="container">
+        <!-- Portfolio Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Proyectos</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <!-- <div class="divider-custom-icon"><i class="fas fa-star"></i></div> -->
+            <div class="divider-custom-line"></div>
         </div>
     </div>
-</div>
-
-
-  <!-- <img src="{% static 'images/pdepinguino_logo.png' %}" alt="P DE PINGUINO IMAGE"> -->
-
-  <!-- <div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
+    <!-- Portfolio Grid Items-->
+    <div class="row justify-content-center">
+        <!-- Portfolio Item 1-->
+        <div class="col-md-6 col-lg-4 mb-5">
+            <div class="portfolio-item mx-auto">
+               <!-- other classes from upper div data-bs-toggle="modal" data-bs-target="#portfolioModal1" -->
+                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    <div class="portfolio-item-caption-content text-center text-white">
+                        <i class="fas fa-feather-alt fa-3x"></i>
+                        <br><a class="text-white" href="{% url 'nerudagramApp:nerudagram' %}">Generador de poemas</a>
+                    </div>
+                </div>
+                <img class="img-fluid" src="{%static 'images/pablo-neruda.png' %}" alt="..." />
+            </div>
+      </div>
+      <!-- Portfolio Item 2-->
+      <div class="col-md-6 col-lg-4 mb-5">
+          <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+              <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div class="portfolio-item-caption-content text-center text-white">
+                    <i class="fas fa-music fa-3x"></i>
+                    <br><a class="text-white" href="{% url 'siteApp:index' %}">Generador de décimas</a>
+                  </div>
+              </div>
+              <img class="img-fluid" src="{%static 'images/decimas.png' %}" alt="..." />
+          </div>
       </div>
     </div>
-    <div class="col">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+</section>
+<!-- About Section-->
+<section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+        <!-- About Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-white">Acerca de</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <!-- <div class="divider-custom-icon"><i class="fas fa-star"></i></div> -->
+            <div class="divider-custom-line"></div>
         </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        <!-- About Section Content-->
+        <div class="row">
+            <div class="col-lg-4 mx-auto text-center"><p class="lead">P de Pinguino es un grupo de investigación multidisciplinar enfocado en relevar la literatura chilena por medio de la aplicación de técnicas y modelos de NLP.</p></div>
+            <!-- <div class="col-lg-4 me-auto"><p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div> -->
         </div>
-      </div>
+        <!-- About Section Button-->
+        <!-- <div class="text-center mt-4">
+            <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
+                <i class="fas fa-download me-2"></i>
+                Free Download!
+            </a>
+        </div> -->
     </div>
-    <div class="col">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </div>
-  </div> -->
+</section>
 
 {% endblock %}
