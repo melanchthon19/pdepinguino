@@ -1,0 +1,28 @@
+{% extends "nerudagram.html" %}
+{% load static %}
+
+{% block neruda_block %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h2>Poema generado</h2>
+      <h3>{{ poem_details.title|capfirst }}</h3>
+      <p>{{ poem_details.poem|linebreaksbr }}</p>
+    </div>
+    <div class="col-sm">
+      <h2>Poema editado</h2>
+      <form method="post">
+        {% csrf_token %}
+        <label for="title">Título:</label><br>
+        <input type="text" id="title" name="title" value="{{form.title.value}}">
+        <textarea id="poem" name="poem" rows="10" cols="30">{{form.poem.value}}</textarea>
+        <br>
+        <input id="submit" type="submit" class="btn btn-primary" value="Guardar edición">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

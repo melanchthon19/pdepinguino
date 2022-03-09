@@ -1,0 +1,17 @@
+{% extends "nerudagram.html" %}
+{% load static %}
+
+{% block neruda_block %}
+<h1>
+  {% if not form.instance.pk %}
+  Crear poema:
+  {% else %}
+  Editar poema:
+  {% endif%}
+</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input id="submit" type="submit" class="btn btn-primary" value="Generar">
+  </form>
+{% endblock %}

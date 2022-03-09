@@ -1,0 +1,11 @@
+{% extends "nerudagram.html" %}
+{% load static %}
+
+{% block neruda_block %}
+  <h1>Poema creado:</h1>
+  <h2>{{ poem_details.title|capfirst }}</h2>
+  <p>{{ poem_details.poem|linebreaksbr }}</p>
+
+  <p><a class='btn btn-warning' href="{% url 'nerudagramApp:update' pk=poem_details.pk %}">Editar</a></p>
+
+{% endblock %}

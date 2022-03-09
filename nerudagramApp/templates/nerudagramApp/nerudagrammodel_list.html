@@ -1,0 +1,14 @@
+{% extends "nerudagram.html" %}
+{% load static %}
+
+{% block neruda_block %}
+<h1>poemas:</h1>
+<ol>
+{% for poema in poemas %}
+  {% if poema.title %}
+    <h3><li><a href="{{ poema.id }}">{{ poema.title|capfirst }}</a></li></h3>
+  {% endif %}
+  <!-- <p>{{ poema.poem|linebreaksbr}}</p> -->
+{% endfor %}
+</ol>
+{% endblock %}

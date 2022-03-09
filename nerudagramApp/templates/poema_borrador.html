@@ -1,0 +1,8 @@
+{% extends "nerudagram.html" %}
+{% load static %}
+
+{% block neruda_block %}
+  <h1>Poema creado:</h1>
+  <h2>{{ detail.title|capfirst }}</h2>
+  <p>{{ detail.poem|linebreaksbr }}</p>
+{% endblock %}
