@@ -1,14 +1,33 @@
 {% extends "nerudagram.html" %}
 {% load static %}
 
-{% block neruda_block %}
-<h1>poemas:</h1>
+<!-- <h1>poemas:</h1>
 <ol>
 {% for poema in poemas %}
   {% if poema.title %}
     <h3><li><a href="{{ poema.id }}">{{ poema.title|capfirst }}</a></li></h3>
   {% endif %}
-  <!-- <p>{{ poema.poem|linebreaksbr}}</p> -->
 {% endfor %}
-</ol>
+</ol> -->
+
+{% block neruda_block %}
+<!-- Gallery -->
+<div class="row">
+
+    {% for poema in poemas %}
+      {% if poema.title %}
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4 mb-lg-3">
+      <div class="card">
+        <img src="{%static 'images/pablo-neruda.png' %}" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+        <div class="card-body">
+          <h5 class="card-title"><a href="{{ poema.id }}">{{ poema.title|capfirst }}</a></h5>
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+
+</div>
 {% endblock %}
