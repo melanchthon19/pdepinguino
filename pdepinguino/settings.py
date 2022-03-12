@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-!!%45glm6-mfc*27$oaj!t#7x%%6en53%ead*or@lh*^fn()w4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['melanchthon19.pythonanywhere.com',]
+ALLOWED_HOSTS = ['http://melanchthon19.pythonanywhere.com/',]
 
 
 # Application definition
