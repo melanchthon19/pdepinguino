@@ -1,0 +1,3 @@
+[submodule "nerudagramApp/n-grams"]
+	path = nerudagramApp/n-grams
+	url = git@github.com:PdePinguino/n-grams.git
