@@ -25,6 +25,9 @@
                         <div class="card-body">
                           <h2 class="fw-bolder mb-4 mt-5">{{ poem_details.title|capfirst }}</h2>
                           <p class="fs-5 mb-4">{{ poem_details.poem|linebreaksbr }}</p>
+                          <!-- {% for line in poem_details.poem %}
+                              <p class="fw-bolder mb-4 mt-5"> {{ line }} </p>
+                          {% endfor %} -->
                         </div>
                       </section>
                   </article>

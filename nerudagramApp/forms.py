@@ -14,6 +14,8 @@ class NerudagramForm(forms.ModelForm):
         title, poem = ngram_pablo_neruda.generate_from_json(
                                         ngram=translate_ngram[ngram],
                                         wpt=wpt, mwpl=mwpl, lpp=lpp)
+        poem = '\n'.join(poem)
+        print(repr(poem))
         return (title, poem)
 
     class Meta:
