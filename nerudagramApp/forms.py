@@ -11,7 +11,7 @@ class NerudagramForm(forms.ModelForm):
         wpt = self.cleaned_data['wpt']
         mwpl = self.cleaned_data['mwpl']
         lpp = self.cleaned_data['lpp']
-        title, poem = ngram_pablo_neruda.generate(
+        title, poem = ngram_pablo_neruda.generate_from_json(
                                         ngram=translate_ngram[ngram],
                                         wpt=wpt, mwpl=mwpl, lpp=lpp)
         return (title, poem)
